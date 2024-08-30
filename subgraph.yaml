@@ -1,0 +1,26 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: ReputationSystem.sol
+    network: gnosis-chiado
+    source:
+      address: "0x193468d1ad00b0a61ecbd442d56098f8d025f17e"
+      abi: ReputationSystem.sol
+      startBlock: 11558500
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ReputationUpdated
+      abis:
+        - name: ReputationSystem.sol
+          file: ./abis/ReputationSystem.sol.json
+      eventHandlers:
+        - event: ReputationUpdated(indexed address,uint256)
+          handler: handleReputationUpdated
+      file: ./src/reputation-system-sol.ts
