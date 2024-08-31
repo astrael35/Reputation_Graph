@@ -1,0 +1,8 @@
+type ReputationUpdated @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  newReputation: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
