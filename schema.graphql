@@ -1,4 +1,4 @@
-type ReputationUpdated @entity(immutable: true) {
+type ReputationUpdated @entity {
   id: Bytes!
   user: Bytes! # address
   newReputation: BigInt! # uint256

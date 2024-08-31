@@ -8,9 +8,9 @@ dataSources:
     name: ReputationSystem.sol
     network: gnosis-chiado
     source:
-      address: "0x193468d1ad00b0a61ecbd442d56098f8d025f17e"
+      address: "0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47"
       abi: ReputationSystem.sol
-      startBlock: 11558500
+      startBlock: 5
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
